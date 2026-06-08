@@ -263,6 +263,11 @@ async def diagnose(request: DiagnoseRequest) -> DiagnoseResponse:
     """
     from chainobserver.agent import EthereumDiagnosisAgent
 
+    from chainobserver.cache import _cache
+    cached = _cache.get(request.tx_hash, request.chain_id)
+    if cached is not None:
+        return cached
+
     gemini_key = os.environ.get("GEMINI_API_KEY", "")
     use_vertex = os.environ.get("USE_VERTEX", "").lower() in ("1", "true", "yes")
     gcp_project = os.environ.get("GCP_PROJECT", "")
@@ -272,11 +277,6 @@ async def diagnose(request: DiagnoseRequest) -> DiagnoseResponse:
             status_code=503,
             detail="GEMINI_API_KEY not configured. Set the env var and restart.",
         )
-
-    from chainobserver.cache import _cache
-    cached = _cache.get(request.tx_hash, request.chain_id)
-    if cached is not None:
-        return cached
 
     agent = EthereumDiagnosisAgent(
         gemini_api_key=gemini_key,
