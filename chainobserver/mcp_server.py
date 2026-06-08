@@ -121,6 +121,9 @@ def get_transaction_receipt(tx_hash: str) -> str:
     gas_used, gas_limit, gas_price_gwei, block_number, input_selector (first 4 bytes),
     log_count.
     """
+    err = _validate_tx_hash(tx_hash)
+    if err:
+        return json.dumps({"error": err})
     w3 = _get_w3()
     try:
         tx = w3.eth.get_transaction(tx_hash)
@@ -168,6 +171,9 @@ def decode_revert_reason(tx_hash: str) -> str:
     Returns JSON with: revert_reason (human-readable string or raw hex),
     error_type (Error/Panic/custom), is_state_dependent (True if replay succeeded).
     """
+    err = _validate_tx_hash(tx_hash)
+    if err:
+        return json.dumps({"error": err})
     w3 = _get_w3()
     try:
         tx = w3.eth.get_transaction(tx_hash)
