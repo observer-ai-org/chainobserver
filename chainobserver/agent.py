@@ -219,6 +219,7 @@ def _parse_report(text: str, tx_hash: str) -> TxDiagnosisReport:
                 affected_address=data.get("affected_address", ""),
                 confidence=Confidence(data.get("confidence", "medium")),
                 fix_suggestion=data.get("fix_suggestion", ""),
+                related_link=f"https://etherscan.io/tx/{tx_hash}",
                 full_analysis=text,
             )
         except (json.JSONDecodeError, ValueError, KeyError) as exc:
@@ -227,5 +228,6 @@ def _parse_report(text: str, tx_hash: str) -> TxDiagnosisReport:
     return TxDiagnosisReport(
         tx_hash=tx_hash,
         root_cause="See full analysis below",
+        related_link=f"https://etherscan.io/tx/{tx_hash}",
         full_analysis=text,
     )

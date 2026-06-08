@@ -135,11 +135,12 @@ def get_transaction_receipt(tx_hash: str) -> str:
     value_wei = tx.get("value", 0)
     gas_price_wei = tx.get("gasPrice", 0)
 
+    to_addr = tx.get("to", "") or "(contract_creation)"
     return json.dumps({
         "tx_hash": tx_hash,
         "status": receipt.get("status", 0),
         "from_addr": tx.get("from", ""),
-        "to_addr": tx.get("to", "") or "(contract_creation)",
+        "to_addr": to_addr,
         "value_eth": str(Web3.from_wei(value_wei, "ether")),
         "gas_used": receipt.get("gasUsed", 0),
         "gas_limit": tx.get("gas", 0),
@@ -147,6 +148,11 @@ def get_transaction_receipt(tx_hash: str) -> str:
         "block_number": receipt.get("blockNumber", 0),
         "input_selector": selector,
         "log_count": len(receipt.get("logs", [])),
+        "etherscan_tx_url": f"https://etherscan.io/tx/{tx_hash}",
+        "etherscan_contract_url": (
+            f"https://etherscan.io/address/{to_addr}"
+            if to_addr != "(contract_creation)" else ""
+        ),
     })
 
 

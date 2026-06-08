@@ -103,3 +103,73 @@ Testing across 4 real failed mainnet transactions covering the main failure cate
 ---
 
 *Generated Day 10 of ETHGlobal Lisbon 25-day sprint (June 8, 2026)*
+
+---
+
+## Days 13-15: Expanded Test Suite (8 real txs + 2 unit-tested)
+
+### TX-5: OUT_OF_GAS — Unknown contract
+**Hash:** `0xc85afb8c601aabc2d0fa55ae930ef7d29030f5a346c94bb7919f07b08314302d`
+**Gas:** 509,039 / 511,453 (99.5%)
+
+| Metric | Result |
+|--------|--------|
+| Tool Result | OOG detected by simulate_transaction ✅ |
+| failure_type | `out_of_gas` |
+| Signal | gas_used >= 98% threshold |
+| Fix | Increase gas limit by 1.5x |
+
+---
+
+### TX-6: SLIPPAGE — CoW Protocol / DAG Swap
+**Hash:** `0x7321fb0ff871d2cbfa30e2b0131881eed34dd17e4560d2fe81dcec1b34b79534`
+**Revert:** `Min return not reached`
+
+| Metric | Result |
+|--------|--------|
+| Tool Result | decode_revert_reason → "Min return not reached" ✅ |
+| failure_type | `slippage_exceeded` |
+| Fix | Increase slippage tolerance or use limit order |
+
+---
+
+### TX-7: SLIPPAGE — Unknown DEX aggregator
+**Hash:** `0x894df9372b1ea83c19e46906f36bf7eb52d4ec716fed337d022b99cd47330d07`
+**Revert:** `INSUFFICIENT_OUTPUT`
+
+| Metric | Result |
+|--------|--------|
+| Tool Result | decode_revert_reason → "INSUFFICIENT_OUTPUT" ✅ |
+| failure_type | `slippage_exceeded` |
+| Fix | Retry with wider slippage; market moved |
+
+---
+
+### TX-8: CONTRACT_REVERT — ParaSwap QuoteExpired
+**Hash:** `0x21c9c841c0a1b77eab457bb5417c94332c89eee44cae73a640564839794370f9`
+**Revert:** Custom error `0x8727a7f9` = `QuoteExpired()`
+
+| Metric | Result |
+|--------|--------|
+| Tool Result | Custom error decoded via 4byte → QuoteExpired() ✅ |
+| failure_type | `contract_revert` |
+| Fix | Refresh the ParaSwap quote and retry within expiry window |
+
+---
+
+## Full Suite Summary (8 real txs)
+
+| # | Type | Hash (prefix) | Signal | MCP Verified |
+|---|------|--------------|--------|-------------|
+| 1 | insufficient_allowance | `0xaa780` | TRANSFER_FROM_FAILED | ✅ |
+| 2 | slippage_exceeded | `0x791cd` | INSUFFICIENT_OUTPUT_AMOUNT | ✅ |
+| 3 | insufficient_balance | `0xb7d9a` | ERC20: transfer amount exceeds balance | ✅ |
+| 4 | contract_revert | `0xd5469` | Seaport custom error 0xa1148100 | ✅ |
+| 5 | out_of_gas | `0xc85af` | gas 99.5% of limit | ✅ |
+| 6 | slippage_exceeded | `0x7321f` | Min return not reached (CoW) | ✅ |
+| 7 | slippage_exceeded | `0x894df` | INSUFFICIENT_OUTPUT (aggregator) | ✅ |
+| 8 | contract_revert | `0x21c9c` | QuoteExpired() ParaSwap | ✅ |
+
+**+ 10 unit tests verifying all 7 failure type classifications (no network)**
+
+*Generated Days 13-15 of ETHGlobal Lisbon sprint (June 8, 2026)*
