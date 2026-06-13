@@ -1,0 +1,72 @@
+════════════════════════════════════════════════════════════════════════════════
+OBSERVER-AI ORG LAUNCH — 3 PHASES PREPARED
+════════════════════════════════════════════════════════════════════════════════
+
+PHASE 1: REPO TRANSFER (When org is live)
+───────────────────────────────────────────────────────────────────────────────
+Files ready:
+  ✅ README_NEW.md           (GitHub-focused, org vision)
+  ✅ CONTRIBUTING_NEW.md     (comprehensive contributor guide)
+  ✅ docs/AGENTS.md          (5-agent roadmap)
+
+Actions:
+  1. Create observer-ai org on GitHub
+  2. Run commands in LAUNCH_CHECKLIST.md (Phase 1 section)
+  3. Push all docs to observer-ai/chainobserver
+  
+Time: ~5 minutes
+
+────────────────────────────────────────────────────────────────────────────────
+
+PHASE 2: ORG LANDING PAGE
+───────────────────────────────────────────────────────────────────────────────
+Files ready:
+  ✅ ORG_LANDING_PAGE.md     (.github/profile/README.md)
+
+Actions:
+  1. Copy ORG_LANDING_PAGE.md → .github/profile/README.md
+  2. Commit & push to org
+  3. Org landing page goes live instantly
+
+Result: https://github.com/observer-ai shows mission + stats + roadmap
+
+Time: ~2 minutes
+
+────────────────────────────────────────────────────────────────────────────────
+
+PHASE 3: SOCIAL LAUNCH
+───────────────────────────────────────────────────────────────────────────────
+Files ready:
+  ✅ TWITTER_ANNOUNCEMENT.md     (6-tweet thread)
+  ✅ HACKERNEWS_POST.md          (post + comment template)
+  ✅ LAUNCH_CHECKLIST.md         (full social strategy)
+
+Platforms:
+  • Twitter          → 6-tweet thread (target: 100+ likes, 20+ RTs)
+  • Hacker News      → Submit with comment template (target: top 20)
+  • Reddit           → r/ethdev + r/defi (cross-post)
+  • Dev.to           → Blog post version
+  • LinkedIn         → Professional version
+  • Discord          → Share in Ethereum/ETHGlobal communities
+
+Expected reach:
+  • Day 1: 50+ GitHub stars
+  • Day 2-7: 500+ total (on track for Phase 2 goal)
+  • Community: 5+ PRs / issues from feedback
+
+Time: ~30 min to set up, then ongoing engagement
+
+════════════════════════════════════════════════════════════════════════════════
+EXECUTION ORDER
+════════════════════════════════════════════════════════════════════════════════
+
+1. You create observer-ai org (do now if not already done)
+2. I execute Phase 1 (repo transfer + push)    ← Takes 5 min
+3. I execute Phase 2 (org landing page)        ← Takes 2 min
+4. You execute Phase 3 (social posts)          ← Takes 30 min setup
+
+Total time to full public launch: ~45 minutes
+
+════════════════════════════════════════════════════════════════════════════════
+NEXT: Confirm org is created, then we proceed!
+════════════════════════════════════════════════════════════════════════════════
