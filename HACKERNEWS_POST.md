@@ -23,21 +23,18 @@ We built ChainObserver because every Ethereum developer knows the pain: a transa
 **The tech:**
 - **Agentic loop:** Gemini decides which tools to call and when it has enough info
 - **Tool standardization:** Model Context Protocol (MCP) for clean, typed tool interfaces
-- **Bounded safety:** Max 6 tool calls — it never spirals
+- **Bounded safety:** ≤5 tool calls per diagnosis (3.25 avg) — it never spirals
 - **Multi-chain:** Works on Ethereum, Arbitrum, Base, Optimism, Polygon
 
 **Real benchmarks:**
-- 4/4 test cases correct
-- 21.8s avg diagnosis
-- 100% accuracy on supported failure types
-- 114 tests passing, 8 real mainnet txs verified
+- 100% correct classification across 8 real mainnet failures (6 categories)
+- 21.8s avg diagnosis · 3.25 tool calls on the timed runs
+- 123 tests passing
 
-**Built for:**
-- ETHGlobal Lisbon 2026 (submission ready)
-- Gemini 2.5 Flash showcase
-- Open-source agent ecosystem (phase 1 of 5 planned agents)
+**Why we built it:**
+- A showcase of Gemini 2.5 Flash doing genuine agentic reasoning over MCP tools
+- Phase 1 of an open-source diagnostic-agent ecosystem (observer-ai)
 
 **Try it:** https://johnlee007-chainobserver.hf.space
 **Repo:** https://github.com/observer-ai-org/chainobserver (MIT)
 **Roadmap:** We're building the same pattern for GitHub Actions, Kubernetes, SQL, and logs next. Contributions welcome.
-

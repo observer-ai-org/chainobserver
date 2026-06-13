@@ -35,7 +35,7 @@ Build agents for each platform that do steps 1-5 automatically.
 
 **Diagnoses:** Failed Ethereum transactions  
 **Performance:** 21.8s avg, 3.25 tool calls, 100% accuracy  
-**Tests:** 114 passing, 8 real mainnet txs verified
+**Tests:** 123 passing, 8 real mainnet txs verified
 
 ---
 

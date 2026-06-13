@@ -5,7 +5,7 @@
 **TWEET 1:**
 🚀 Introducing observer-ai — agentic observability for every platform.
 
-We just launched ChainObserver: diagnose failed Ethereum transactions in ~25 seconds with 100% accuracy. 
+We just launched ChainObserver: diagnose failed Ethereum transactions in ~25 seconds with 100% classification accuracy on our benchmark set.
 
 No more Etherscan deep dives. No more ABI hunting. Gemini 2.5 Flash + MCP tools do it for you.
 
@@ -25,19 +25,17 @@ A tx fails with "execution reverted" → 20-60 min debugging
 - 10 min: ABI lookup + selector decode
 - 5 min: Internal call trace
 
-ChainObserver: 25 seconds. 3 tool calls. Done.
+ChainObserver: ~25 seconds. 3 tool calls. Done.
 
 ---
 
 **TWEET 3:**
-What we support:
-✅ Slippage failures (Uniswap)
+What we support (verified on real mainnet failures):
+✅ Slippage failures (Uniswap / CoW / ParaSwap)
 ✅ Insufficient balance
 ✅ Missing token approval
 ✅ Out-of-gas failures
-✅ Custom contract reverts
-✅ Access control failures
-✅ Low liquidity pools
+✅ Custom contract reverts (decoded via 4byte + Sourcify)
 
 And it works across 5 chains: ETH, Arbitrum, Base, Optimism, Polygon.
 
@@ -48,10 +46,10 @@ The tech stack:
 🧠 Gemini 2.5 Flash (agentic loop)
 🔧 Model Context Protocol (5 custom tools)
 ⚡ FastAPI (REST endpoints)
-🧪 114 tests (8 real mainnet failures verified)
+🧪 123 tests (8 real mainnet failures verified)
 📦 Open source (MIT license)
 
-Benchmarks: 21.8s avg diagnosis, 100% accuracy.
+Benchmarks: 21.8s avg diagnosis, 100% classification accuracy.
 
 ---
 
@@ -67,15 +65,12 @@ Interested in building one? https://github.com/observer-ai-org/chainobserver/tre
 ---
 
 **TWEET 6:**
-Built for @ETHGlobal Lisbon 2026 + @GoogleAI Build with Gemini XPRIZE.
+If you've ever burned an afternoon debugging a failed Ethereum transaction, we'd love your feedback.
 
-If you've struggled debugging Ethereum transactions, we'd love your feedback.
-
-Open issues, discussions, PRs welcome.
+Open issues, discussions, and PRs welcome.
 
 Let's make debugging instant. ⚡
 
 #Ethereum #Gemini #AIAgent #OpenSource
 
 ---
-

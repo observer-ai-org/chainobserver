@@ -17,7 +17,7 @@ We're building 5 diagnostic agents that use Gemini 2.5 Flash + MCP to instantly 
 - 7 failure types covered (slippage, insufficient balance, OOG, custom reverts, etc.)
 - 100% accuracy across 4 test cases
 - Multi-chain support: Ethereum, Arbitrum, Base, Optimism, Polygon
-- **114 tests passing** · Open source (MIT) · Built for ETHGlobal Lisbon 2026
+- **123 tests passing** · Open source (MIT) · Built for ETHGlobal Lisbon 2026
 
 👉 **Try it:** https://johnlee007-chainobserver.hf.space
 
@@ -32,7 +32,7 @@ We're building 5 diagnostic agents that use Gemini 2.5 Flash + MCP to instantly 
 | Repo | Status | Description |
 |------|--------|-------------|
 | [chainobserver](https://github.com/observer-ai-org/chainobserver) | ✅ Live | Ethereum transaction diagnostics |
-| [pipelineguard](https://github.com/observer-ai-org/pipelineguard) | ✅ Live | GitLab CI diagnostics (origin agent) |
+| [pipelineguard](https://github.com/observer-ai-org/pipelineguard) | 🚀 Coming | GitLab CI diagnostics (origin agent) |
 | [observer-ai.dev](https://github.com/observer-ai-org/observer-ai.dev) | 🚀 Coming | Landing page + SaaS dashboard |
 
 ## 🤝 Contributing
@@ -46,7 +46,7 @@ We're building 5 diagnostic agents that use Gemini 2.5 Flash + MCP to instantly 
 
 ## 📊 Stats
 
-- **114 tests passing** across all agents
+- **123 tests passing** across all agents
 - **8 real-world failure cases** in benchmarks
 - **4.9s avg diagnosis time** (Ethereum)
 - **100% accuracy** on supported failure types
