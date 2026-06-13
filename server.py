@@ -157,7 +157,7 @@ Content-Type: application/json
 </main>
 <footer>
   <p>Built for <strong>ETHGlobal Lisbon 2026</strong> · Powered by Gemini 2.5 Flash · 
-     <a href="https://github.com/observer-ai/chainobserver">GitHub</a>
+     <a href="https://github.com/observer-ai-org/chainobserver">GitHub</a>
   </p>
 </footer>
 <script>

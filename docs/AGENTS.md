@@ -30,8 +30,8 @@ Build agents for each platform that do steps 1-5 automatically.
 ## 1. ChainObserver ✅ (COMPLETE)
 
 **Status:** MVP shipped, benchmarks locked  
-**Repository:** https://github.com/observer-ai/chainobserver  
-**Live Demo:** https://chainobserver.hf.space
+**Repository:** https://github.com/observer-ai-org/chainobserver  
+**Live Demo:** https://johnlee007-chainobserver.hf.space
 
 **Diagnoses:** Failed Ethereum transactions  
 **Performance:** 21.8s avg, 3.25 tool calls, 100% accuracy  

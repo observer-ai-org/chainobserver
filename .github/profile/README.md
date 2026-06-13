@@ -19,7 +19,7 @@ We're building 5 diagnostic agents that use Gemini 2.5 Flash + MCP to instantly 
 - Multi-chain support: Ethereum, Arbitrum, Base, Optimism, Polygon
 - **114 tests passing** · Open source (MIT) · Built for ETHGlobal Lisbon 2026
 
-👉 **Try it:** https://chainobserver.hf.space
+👉 **Try it:** https://johnlee007-chainobserver.hf.space
 
 ### 🚀 Coming Next
 - **GitHubGuard** (June 18) — GitHub Actions workflow diagnostics
@@ -31,13 +31,13 @@ We're building 5 diagnostic agents that use Gemini 2.5 Flash + MCP to instantly 
 
 | Repo | Status | Description |
 |------|--------|-------------|
-| [chainobserver](https://github.com/observer-ai/chainobserver) | ✅ Live | Ethereum transaction diagnostics |
-| [pipelineguard](https://github.com/observer-ai/pipelineguard) | ✅ Live | GitLab CI diagnostics (origin agent) |
-| [observer-ai.dev](https://github.com/observer-ai/observer-ai.dev) | 🚀 Coming | Landing page + SaaS dashboard |
+| [chainobserver](https://github.com/observer-ai-org/chainobserver) | ✅ Live | Ethereum transaction diagnostics |
+| [pipelineguard](https://github.com/observer-ai-org/pipelineguard) | ✅ Live | GitLab CI diagnostics (origin agent) |
+| [observer-ai.dev](https://github.com/observer-ai-org/observer-ai.dev) | 🚀 Coming | Landing page + SaaS dashboard |
 
 ## 🤝 Contributing
 
-**Want to build a diagnostic agent?** See [chainobserver/docs/AGENTS.md](https://github.com/observer-ai/chainobserver/tree/main/docs/AGENTS.md) for:
+**Want to build a diagnostic agent?** See [chainobserver/docs/AGENTS.md](https://github.com/observer-ai-org/chainobserver/tree/main/docs/AGENTS.md) for:
 - How to build a full agent (GitHubGuard, etc.)
 - How to create a standalone MCP server
 - How to add support for a new blockchain

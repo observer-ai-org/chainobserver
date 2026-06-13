@@ -170,7 +170,7 @@ Tested on 4 real mainnet failed transactions (June 8, 2026):
 
 ```bash
 # Install
-git clone https://github.com/observer-ai/chainobserver
+git clone https://github.com/observer-ai-org/chainobserver
 cd chainobserver
 pip install -e .
 

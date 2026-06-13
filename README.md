@@ -1,6 +1,6 @@
 # ChainObserver
 
-[![Tests](https://github.com/observer-ai/chainobserver/actions/workflows/test.yml/badge.svg)](https://github.com/observer-ai/chainobserver/actions/workflows/test.yml)
+[![Tests](https://github.com/observer-ai-org/chainobserver/actions/workflows/test.yml/badge.svg)](https://github.com/observer-ai-org/chainobserver/actions/workflows/test.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![ETHGlobal Lisbon 2026](https://img.shields.io/badge/ETHGlobal-Lisbon%202026-purple)](https://ethglobal.com)
@@ -11,7 +11,7 @@ Paste a failed tx hash → get root cause + fix, powered by **Gemini 2.5 Flash**
 
 ## 🚀 Try It Now
 
-**Web:** https://chainobserver.hf.space  
+**Web:** https://johnlee007-chainobserver.hf.space  
 **API:** `POST /diagnose` with `{tx_hash: "0x..."}`
 
 ## 💡 The Problem
@@ -54,7 +54,7 @@ ChainObserver does this in **~25 seconds** with 100% accuracy.
 ### Installation
 
 ```bash
-git clone https://github.com/observer-ai/chainobserver
+git clone https://github.com/observer-ai-org/chainobserver
 cd chainobserver
 pip install -e .
 ```
@@ -146,8 +146,8 @@ MIT — See [LICENSE](./LICENSE)
 
 ## 🙋 Support
 
-- 📧 **Issues & bugs:** [GitHub Issues](https://github.com/observer-ai/chainobserver/issues)
-- 💬 **Discussions:** [GitHub Discussions](https://github.com/observer-ai/chainobserver/discussions)
+- 📧 **Issues & bugs:** [GitHub Issues](https://github.com/observer-ai-org/chainobserver/issues)
+- 💬 **Discussions:** [GitHub Discussions](https://github.com/observer-ai-org/chainobserver/discussions)
 
 ---
 
